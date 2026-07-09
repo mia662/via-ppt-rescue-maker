@@ -1,0 +1,7 @@
+interface:
+  display_name: "ppt神器"
+  short_description: "先确认页序和两张风格样张，再批量生成高质量 PPT 页面 PNG"
+  default_prompt: "用 $via-ppt-rescue-maker 把我的主题或材料整理成能讲的 PPT。请先给我页序大纲确认，再生成第 1 页和一张代表性内容页让我确认风格，最后批量生成每页 PNG。"
+
+policy:
+  allow_implicit_invocation: true

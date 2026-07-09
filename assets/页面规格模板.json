@@ -1,0 +1,71 @@
+{
+  "deck": {
+    "title": "填写汇报标题",
+    "material_state": "只有主题 / 有大纲 / 有完整文档 / 有散乱素材 / 有旧 PPT / 有数据表",
+    "scene": "填写汇报场景",
+    "audience": "填写听众",
+    "page_count": 0,
+    "aspect_ratio": "16:9",
+    "style_direction": {
+      "density": "根据场景和证据要求决定",
+      "tone": "匹配受众、场合、内容严肃度和页面任务",
+      "palette": "由 image 模型根据场景选择，不预设固定色板",
+      "texture": "由 image 模型根据场景选择，但必须可信、清晰、可汇报",
+      "avoid": ["文字裁切", "封面海报感", "空洞大字报", "油亮塑料感", "过度磨皮感", "假 3D", "糖果渐变", "无意义贴纸装饰"]
+    },
+    "style_lock": {
+      "confirmed_sample_pages": [],
+      "must_remain_consistent": ["字体气质和标题层级", "主色/辅助色/强调色关系", "背景质感或页面底色", "图形/插图/图标/线条风格", "页码页脚和来源说明方式", "留白节奏和页面边距气质"],
+      "can_vary_by_page": ["具体构图", "主视觉位置", "图表或流程类型", "信息密度", "图片或插图占比"],
+      "inheritance_note": "后续页面必须继承已确认样张的视觉系统；可以改变内容结构，但不能切换成另一套模板或另一种图标插图系统"
+    },
+    "footer_rule": "页脚保留来源、假设或模拟说明"
+  },
+  "slides": [
+    {
+      "page": 1,
+      "title": "填写页面标题",
+      "role": "填写页面角色",
+      "audience_question": "填写听众问题",
+      "message": "填写一句话结论",
+      "notes": "填写讲稿备注",
+      "source_status": "来自用户材料 / 来自已核验引用 / 需要从表格计算 / 模拟假设 / 待核验",
+      "content_relationship_brief": {
+        "audience_question": "这一页回答的听众问题",
+        "one_sentence_conclusion": "这一页必须讲清的一句话结论",
+        "core_content_relation": "机制 / 流程 / 对比 / 证据 / 案例 / 指标 / 行动路径",
+        "information_priority": ["最需要先被理解的信息", "辅助解释信息", "补充边界或来源"],
+        "evidence_and_source_responsibility": "证据、解释、来源或假设承担什么责任",
+        "layout_freedom": "不规定左右、上下、卡片数量或固定构图，由 image 模型决定排版"
+      },
+      "visual_director_decision": {
+        "page_intent": "这一页要让观众感受到或理解什么",
+        "expression_strategy": "用什么视觉策略表达内容关系，强调正向表达而不是禁令",
+        "visual_metaphor": "可选隐喻；没有必要时写“不使用隐喻，使用信息结构表达”",
+        "focus_decision": "主视觉焦点来自哪类内容关系，例如机制、证据、对比、行动路径或案例空间",
+        "aesthetic_risk_focus": ["最多 3 个本页最需要警惕的审美风险"],
+        "layout_boundary": "不写固定布局、左右结构、卡片数量、具体坐标或版式槽位"
+      },
+      "graphic_language_hint": {
+        "suggested_graphic_language": "机制图 / 流程图 / 时间线 / 对照矩阵 / 数据图 / 证据墙 / 行动板 / 由设计师基于内容选择",
+        "decision_source": "从内容关系简报和视觉导演决策继承，不重新发明页面结构",
+        "design_freedom": "允许 image 模型根据内容关系自主决定构图、分区、比例和留白"
+      },
+      "content_blocks": [
+        {
+          "name": "内容块 1",
+          "function": "定义 / 变量 / 证据 / 解释 / 限制 / 行动 / 来源",
+          "relationship_to_core": "与核心内容关系的作用，例如支撑、解释、对照、限制或行动",
+          "content": ["填写必须出现在页面里的文字、变量、证据或案例"],
+          "visual": "填写图形形式"
+        }
+      ],
+      "image_prompt_constraints": {
+        "must_keep": ["页面标题", "一句话结论", "主要信息块", "页脚来源或假设"],
+        "hard_boundaries": ["单页 16:9", "锁定内容不改写", "中文完整可读", "不编造数据或引用"],
+        "quality": "像真实场景中可直接汇报的页面，不像营销海报、模板样机或 AI 试手图"
+      },
+      "background_image": "页面图片/第01页.png"
+    }
+  ]
+}
